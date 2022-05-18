@@ -5,8 +5,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign-up Form</title>
     <link rel="stylesheet" href="styles.css">
+    
 </head>
 <body>
-    <p>Hi</p>    
+    <div class="left">
+        <div class="logo"></div>
+    </div>
+    <div class="right">
+        <div class="upper">
+            <p>some random giberish</p>
+        </div>
+        <div class="form">
+            <form action="" method="post">
+                <div class="first-name">
+                    <label for="first_name">First Name:</label>
+                    <input type="text" name="first_name" id="first_name">
+                </div>
+                <div class="last-name">
+                    <label for="last_name">Last Name:</label>
+                    <input type="text" name="last_name" id="last_name">
+                </div>
+                <div class="email">
+                    <label for="user_email">Email Address:</label>
+                    <input type="email" name="email" id="user_email">
+                </div>
+                <div class="phone-number">
+                    <label for="phone_number">Phone number:</label>
+                    <input type="number" name="phone_number" id="phone_number">
+                </div>
+                <div class="password error">
+                    <label for="password">Password:</label>
+                    <input type="password" name="password" id="password">
+                    
+                </div>
+                <div class="password-conf error">
+                    <label for="password_conf">Confirm Password:</label>
+                    <input type="password" name="password_conf" id="password_conf">
+                </div>
+                
+            </form>
+            <div class="bottom">
+                <button class="sbtn" type="submit">Create account</button>
+                <p>also random giberish. <a href="">Log in.</a></p>
+            </div>
+        </div> 
+    </div>
+    <!-- Password validation -->
+    <script>
+        const password = document.getElementById("password");
+        const password_conf = document.getElementById("password_conf");
+        const sbtn = document.querySelector('.sbtn');
+        const container = document.querySelector('.bottom');
+        const msg = document.createElement('p');
+
+        function validatePassword() {
+            if(password.value != password_conf.value) {
+                if(msg.textContent === '* Passwords do not match') {
+                    return;
+                }
+                msg.textContent = '* Passwords do not match';
+                container.appendChild(msg);
+            }
+            else {
+                msg.textContent = '';
+            }
+        }
+        sbtn.addEventListener('click', validatePassword)
+    </script>
 </body>
 </html>
