@@ -19,43 +19,50 @@
     </div>
     <div class="right">
         <div class="upper">
-            <p>some random giberish</p>
+            <p>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. <br>Sign up <em>now</em> to get started.</p>
+            <p>You <em>know</em> you want to.</p>
         </div>
         <div class="form">
+            <legend>Let's do this!</legend>
             <form action="" method="post">
-                <div class="first-name">
-                    <label for="first_name">First Name:</label>
-                    <input type="text" name="first_name" id="first_name">
+                <div class="row1">
+                    <div class="first-name">
+                        <label for="first_name">FIRST NAME:</label>
+                        <input type="text" name="first_name" id="first_name">
+                    </div>
+                    <div class="last-name">
+                        <label for="last_name">LAST NAME:</label>
+                        <input type="text" name="last_name" id="last_name">
+                    </div>
                 </div>
-                <div class="last-name">
-                    <label for="last_name">Last Name:</label>
-                    <input type="text" name="last_name" id="last_name">
+                <div class="row2">
+                    <div class="email">
+                        <label for="user_email">EMAIL:</label>
+                        <input type="email" name="email" id="user_email">
+                    </div>
+                    <div class="phone-number">
+                        <label for="phone_number">PHONE NUMBER:</label>
+                        <input type="number" name="phone_number" id="phone_number">
+                    </div>
                 </div>
-                <div class="email">
-                    <label for="user_email">Email Address:</label>
-                    <input type="email" name="email" id="user_email">
+                <div class="row3">
+                    <div class="password error">
+                        <label for="password">PASSWORD:</label>
+                        <input type="password" name="password" id="password">
+                        
+                    </div>
+                    <div class="password-conf error">
+                        <label for="password_conf">CONFIRM PASSWORD:</label>
+                        <input type="password" name="password_conf" id="password_conf">
+                    </div>
                 </div>
-                <div class="phone-number">
-                    <label for="phone_number">Phone number:</label>
-                    <input type="number" name="phone_number" id="phone_number">
-                </div>
-                <div class="password error">
-                    <label for="password">Password:</label>
-                    <input type="password" name="password" id="password">
-                    
-                </div>
-                <div class="password-conf error">
-                    <label for="password_conf">Confirm Password:</label>
-                    <input type="password" name="password_conf" id="password_conf">
-                </div>
-                
             </form>
             <!--Div is outside form as it refreshed page on click-->
-            <div class="bottom">
-                <button class="sbtn" type="submit">Create account</button>
-                <p>also random giberish. <a href="">Log in.</a></p>
-            </div>
         </div> 
+        <div class="bottom">
+            <button class="sbtn" type="submit">Create account</button>
+            <p>Already have an account? <a href="">Log in.</a></p>
+        </div>
     </div>
     <!-- Password validation -->
     <script>

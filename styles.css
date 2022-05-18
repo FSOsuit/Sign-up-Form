@@ -47,9 +47,39 @@ img {
 }
 
 .right {
-    background-color: aqua;
-    width: 65%;
+    background-color: rgb(241, 243, 243);
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    
 }
 
+.upper {
+    background-color: aqua;
+    height: 37%;
+
+}
+
+.form {
+    
+    background-color: aquamarine;
+    height: 28%;
+}
+
+.bottom {
+    background-color: bisque;
+    height: 35%;
+}
+
+.row1, .row2, .row3 {
+    display: flex;
+}
+
+.first-name, .last-name, .email, .phone-number, 
+.password, .password-conf {
+    display: flex;
+    flex-direction: column;
+    
+}
 
 
