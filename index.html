@@ -26,7 +26,7 @@
         </div>
         <div class="form">
             <legend>Let's do this!</legend>
-            <form action="" method="post">
+            <form id="form" action="" method="post">
                 <div class="row1">
                     <div class="first-name">
                         <label for="first_name">FIRST NAME:</label>
@@ -48,18 +48,18 @@
                     </div>
                 </div>
                 <div class="row3">
-                    <div class="password error">
+                    <div class="password">
                         <label for="password">PASSWORD:</label>
                         <input type="password" name="password" id="password">
                         
                     </div>
-                    <div class="password-conf error">
+                    <div class="password-conf">
                         <label for="password_conf">CONFIRM PASSWORD:</label>
                         <input type="password" name="password_conf" id="password_conf">
                     </div>
                 </div>
             </form>
-            <!--Div is outside form as it refreshed page on click-->
+            <!--Button is outside form as it refreshed page on click, will work if form="form" is added-->
         </div> 
         <div class="bottom">
             <button class="sbtn" type="submit">Create account</button>
@@ -71,7 +71,7 @@
         const password = document.getElementById("password");
         const password_conf = document.getElementById("password_conf");
         const sbtn = document.querySelector('.sbtn');
-        const container = document.querySelector('.bottom');
+        const container = document.querySelector('.password');
         const msg = document.createElement('p');
 
         function validatePassword() {
@@ -79,11 +79,18 @@
                 if(msg.textContent === '* Passwords do not match') {
                     return;
                 }
+                password.classList.add('error');
+                password_conf.classList.add('error');
                 msg.textContent = '* Passwords do not match';
+                msg.style.margin = '0';
+                msg.style.fontSize = '12';
+                msg.style.color = 'red';
                 container.appendChild(msg);
             }
             else {
                 msg.textContent = '';
+                password.classList.remove('error');
+                password_conf.classList.remove('error');
             }
         }
         sbtn.addEventListener('click', validatePassword)
